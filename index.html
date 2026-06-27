@@ -405,6 +405,7 @@
             width: 100%;
             height: 420px;
             object-fit: cover;
+            object-position: right center;
             border-radius: 16px;
             box-shadow: var(--card-shadow);
         }
@@ -925,9 +926,9 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 28px;
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -1127,7 +1128,8 @@
         .doc-meta {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         .doc-type {
@@ -1156,6 +1158,25 @@
 
         .doc-download:hover {
             background: var(--blue);
+            color: var(--white);
+        }
+
+        .doc-view {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 6px 14px;
+            border-radius: 6px;
+            background: rgba(201, 168, 76, 0.08);
+        }
+
+        .doc-view:hover {
+            background: var(--accent);
             color: var(--white);
         }
 
@@ -1512,7 +1533,7 @@
             }
 
             .gallery-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             .lang-grid {
@@ -1576,6 +1597,10 @@
 
             .license-grid {
                 grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1848,11 +1873,6 @@
                 <p>Cars, SUVs &amp; light vans</p>
             </div>
             <div class="license-card reveal">
-                <div class="license-letter">C</div>
-                <h4>Heavy Vehicles</h4>
-                <p>Trucks &amp; goods transport</p>
-            </div>
-            <div class="license-card reveal">
                 <div class="license-letter">D</div>
                 <h4>Passenger Vehicles</h4>
                 <p>Buses &amp; minibuses</p>
@@ -1874,7 +1894,7 @@
                 <div class="cert-icon"><i class="fas fa-award"></i></div>
                 <div class="cert-info">
                     <h3>EF Certificate</h3>
-                    <p>Professional development certification demonstrating commitment to excellence.</p>
+                    <p>English language certification showcasing effective communication skills for professional driving, customer service, and international environments.</p>
                     <div class="cert-status"><i class="fas fa-circle-check"></i> Verified</div>
                 </div>
             </div>
@@ -1981,6 +2001,14 @@
                     <p>Rwanda's premier wildlife destination</p>
                 </div>
             </div>
+            <div class="gallery-item reveal" onclick="openLightbox(this)">
+                <img src="hemmingWaysPic1.jpeg" alt="Hemingway's experience in Rwanda" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="view-icon"><i class="fas fa-expand"></i></div>
+                    <h4>Hemingway's Rwanda</h4>
+                    <p>Premium hospitality and tourism moments</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -2007,6 +2035,9 @@
                     <p>My complete driving career CV with experience, skills, and qualifications.</p>
                     <div class="doc-meta">
                         <span class="doc-type">PDF</span>
+                        <a href="https://drive.google.com/file/d/14O0I7jiqEtifQ-GfeayIXo8MyQV_BPYz/view?usp=drive_link" class="doc-view" target="_blank" rel="noopener">
+                            <i class="fas fa-eye"></i> View
+                        </a>
                         <a href="https://drive.google.com/uc?export=download&id=14O0I7jiqEtifQ-GfeayIXo8MyQV_BPYz" class="doc-download" target="_blank" rel="noopener">
                             <i class="fas fa-download"></i> Download
                         </a>
@@ -2020,6 +2051,9 @@
                     <p>Official Rwandan driving license covering multiple vehicle categories.</p>
                     <div class="doc-meta">
                         <span class="doc-type">PDF</span>
+                        <a href="https://drive.google.com/file/d/1WTwGWXvay-1T22PkR8h4NqSW22VfJW9X/view?usp=drive_link" class="doc-view" target="_blank" rel="noopener">
+                            <i class="fas fa-eye"></i> View
+                        </a>
                         <a href="https://drive.google.com/uc?export=download&id=1WTwGWXvay-1T22PkR8h4NqSW22VfJW9X" class="doc-download" target="_blank" rel="noopener">
                             <i class="fas fa-download"></i> Download
                         </a>
@@ -2033,6 +2067,9 @@
                     <p>Professional development certificate from EF program.</p>
                     <div class="doc-meta">
                         <span class="doc-type">PDF</span>
+                        <a href="https://drive.google.com/file/d/10vNfrcIhfag4tw8FMPRA4zO5-Y8_Ijiy/view?usp=drive_link" class="doc-view" target="_blank" rel="noopener">
+                            <i class="fas fa-eye"></i> View
+                        </a>
                         <a href="https://drive.google.com/uc?export=download&id=10vNfrcIhfag4tw8FMPRA4zO5-Y8_Ijiy" class="doc-download" target="_blank" rel="noopener">
                             <i class="fas fa-download"></i> Download
                         </a>
@@ -2046,6 +2083,9 @@
                     <p>Certified English language proficiency for international communication.</p>
                     <div class="doc-meta">
                         <span class="doc-type">PDF</span>
+                        <a href="https://drive.google.com/file/d/1bUCMVEvGo6AEKNi_-8mm8tQh6TgBe_7T/view?usp=drive_link" class="doc-view" target="_blank" rel="noopener">
+                            <i class="fas fa-eye"></i> View
+                        </a>
                         <a href="https://drive.google.com/uc?export=download&id=1bUCMVEvGo6AEKNi_-8mm8tQh6TgBe_7T" class="doc-download" target="_blank" rel="noopener">
                             <i class="fas fa-download"></i> Download
                         </a>
@@ -2059,7 +2099,26 @@
                     <p>Official service certificate from last employer confirming work experience.</p>
                     <div class="doc-meta">
                         <span class="doc-type">PDF</span>
+                        <a href="https://drive.google.com/file/d/1SmVnsB6mUHxHYi9pJ7n6iJBQO2q4CbLB/view?usp=drive_link" class="doc-view" target="_blank" rel="noopener">
+                            <i class="fas fa-eye"></i> View
+                        </a>
                         <a href="https://drive.google.com/uc?export=download&id=1SmVnsB6mUHxHYi9pJ7n6iJBQO2q4CbLB" class="doc-download" target="_blank" rel="noopener">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="doc-card reveal">
+                <div class="doc-icon cert"><i class="fas fa-network-wired"></i></div>
+                <div class="doc-info">
+                    <h3>Computer Networking Skills Certificate</h3>
+                    <p>Certification in computer networking, adding technical depth to fleet and logistics operations.</p>
+                    <div class="doc-meta">
+                        <span class="doc-type">PDF</span>
+                        <a href="https://drive.google.com/file/d/1NVosv8u0bxyl3QGn47lt1k9ZLSIf1uoj/view?usp=drive_link" class="doc-view" target="_blank" rel="noopener">
+                            <i class="fas fa-eye"></i> View
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1NVosv8u0bxyl3QGn47lt1k9ZLSIf1uoj" class="doc-download" target="_blank" rel="noopener">
                             <i class="fas fa-download"></i> Download
                         </a>
                     </div>
@@ -2072,6 +2131,9 @@
                     <p>Copy of official Rwandan national identification document.</p>
                     <div class="doc-meta">
                         <span class="doc-type">PDF</span>
+                        <a href="https://drive.google.com/file/d/1PrpjeIosUjgPhF8-IfsSRWFny8AxRVrl/view?usp=drive_link" class="doc-view" target="_blank" rel="noopener">
+                            <i class="fas fa-eye"></i> View
+                        </a>
                         <a href="https://drive.google.com/uc?export=download&id=1PrpjeIosUjgPhF8-IfsSRWFny8AxRVrl" class="doc-download" target="_blank" rel="noopener">
                             <i class="fas fa-download"></i> Download
                         </a>
