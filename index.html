@@ -1263,24 +1263,45 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 28px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .project-card {
             background: var(--white);
-            padding: 32px;
-            border-radius: 14px;
+            padding: 24px;
+            border-radius: 16px;
             box-shadow: var(--card-shadow);
             transition: var(--transition);
             display: flex;
+            flex-direction: column;
             gap: 20px;
-            align-items: flex-start;
         }
 
         .project-card:hover {
             box-shadow: var(--card-shadow-hover);
             transform: translateY(-3px);
+        }
+
+        .project-preview {
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--off-white);
+            border: 1px solid var(--light-gray);
+        }
+
+        .project-preview img {
+            display: block;
+            width: 100%;
+            max-height: 420px;
+            object-fit: contain;
+            background: var(--white);
+        }
+
+        .project-details {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
         }
 
         .project-icon {
@@ -1688,6 +1709,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#licenses">Licenses</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#documents">Documents</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -2280,20 +2302,25 @@
 <section class="projects" id="projects">
     <div class="container">
         <div class="section-header reveal">
-            <div class="section-tag">Prototype</div>
+            <div class="section-tag">My Logistics Management Project</div>
             <h2 class="section-title">SmartLog Project Prototype</h2>
-            <p class="section-desc">A logistics-focused UI concept for smarter fleet, delivery, and operations management.</p>
+            <p class="section-desc">An AI-driven logistics management-focused UI concept for smarter fleet, delivery, and operations management.</p>
         </div>
         <div class="project-grid">
             <div class="project-card reveal">
-                <div class="project-icon"><i class="fas fa-diagram-project"></i></div>
-                <div class="project-info">
-                    <h3>SmartLog</h3>
-                    <p>An interactive Figma prototype designed to showcase a modern logistics platform with shipment tracking, route planning, and operations visibility.</p>
-                    <a href="https://omen-define-20912390.figma.site/" class="project-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-arrow-up-right-from-square"></i> View Prototype
-                    </a>
-                    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 8px;"><i class="fas fa-desktop"></i> Best viewed on a Windows desktop/console for the best experience.</p>
+                <div class="project-preview">
+                    <img src="Screenshot (88).png" alt="SmartLog project preview screenshot" loading="lazy">
+                </div>
+                <div class="project-details">
+                    <div class="project-icon"><i class="fas fa-diagram-project"></i></div>
+                    <div class="project-info">
+                        <h3>SmartLog</h3>
+                        <p>An interactive Figma prototype designed to showcase a modern logistics platform with shipment tracking, route planning, and operations visibility.</p>
+                        <a href="https://omen-define-20912390.figma.site/" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-arrow-up-right-from-square"></i> View Prototype
+                        </a>
+                        <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 8px;"><i class="fas fa-desktop"></i> Best viewed on a desktop/console for the best experience!!</p>
+                    </div>
                 </div>
             </div>
         </div>
